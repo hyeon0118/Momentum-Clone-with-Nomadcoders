@@ -1,0 +1,210 @@
+.hidden {
+    display:none;
+}
+
+body {
+    font-family: 'Varela Round', sans-serif;
+    text-align:center;
+}
+
+#bgImg { 
+    position:absolute;
+    left:0;
+    top:0;
+    max-width:100%;
+    min-width:1880px;
+    max-height:1400px;
+    min-height:1200px;
+    z-index:-5;
+    opacity:0.3;
+}
+
+#clock {
+    text-align:center;
+    padding-top:50px;
+    color:rgba(126, 126, 126, 0.8);
+    font-weight:bold;
+}
+
+#weather {
+    text-align:center;
+}
+
+
+#greeting, #greetingUser {
+    display:inline;
+    color:grey;
+}
+
+#greetingUser {
+    color:rgb(46, 46, 46);
+    font-weight:bold;
+}
+
+
+
+#login-form, #greeting-container {
+    text-align:center;
+    padding:0px;
+    margin:100px;
+    padding-left:30px;
+}
+
+#login-form input {
+    text-align:center;
+    background-color:rgba(255,255,255,0.3);
+    border:none;
+    transition: all, 0.4s;
+    height:40px;
+    width:200px;    
+    border-radius:10px;
+    color:grey;
+}
+
+#login-form input::placeholder {
+    font-family:'Varela Round', sans-serif;
+}
+
+#login-form input:hover {
+    background-color:rgba(255,255,255,0.5);
+}
+
+#login-form input:hover::-webkit-input-placeholder {
+    color:rgb(50,50,50,0.3);
+    transition:all, 0.4s;
+}
+
+
+
+#login-form input:focus {
+    outline:none;
+    background-color:rgba(0,0,0,0)
+}
+
+#login-form button {
+    border-radius:50px;
+    border:none;
+    height:30px;
+    width:60px;
+    cursor:pointer;
+    transition:all, 0.4s;
+    font-family:'Varela Round', sans-serif;
+
+}
+
+#login-form button:hover {
+    background-color:rgba(255,255,255,0.8);
+}
+
+#login-form button:active {
+    background-color:darkgrey;
+    color:white;
+    outline:none;
+}
+
+#greeting {
+    text-align:center;
+}
+
+
+
+#todo-form {
+    text-align:center;
+}
+
+#todo-form input {
+    width:400px;
+    height:30px;
+    color:grey;
+    font-size:1rem;
+    font-weight:500;
+    text-align:center;
+    border:none;
+    border-bottom:2px solid rgb(100, 100, 100);
+    background-color:rgba(255, 255, 255, 0.2);
+    transition:all, 0.4s;
+    border-radius:10px 10px 0px 0px;
+}
+
+#todo-form input:hover {
+    background-color:rgba(255,255,255,0.5);
+}
+
+#todo-form input:hover::-webkit-input-placeholder {
+    color:rgb(50,50,50,0.3);
+    transition:all, 0.4s;
+}
+
+#todo-form input:focus {
+    outline:none;
+    border-bottom:2px solid rgba(100,100,100,0.5);
+    background-color:rgba(0,0,0,0)
+}
+
+#todo-list li {
+    text-align:center;
+    list-style:none;
+    margin-top:10px;
+}
+
+#todo-list button {
+    border:none;
+    background-color:rgba(0,0,0,0);
+    font-size:10px;
+    align-items:center;
+    cursor:pointer;
+}
+
+#todo-list .tooltip {
+    visibility:hidden;
+    width:120px;
+    background-color:#555;
+    color: #fff;
+    text-align:center;
+    border-radius:6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index:1;
+    bottom:125%;
+    left:50%;
+    margin-left:-60%;
+    opacity:0;
+    transition:opacity 0.3s;
+}
+
+#todo-list .tooltip::after {
+    content:"";
+    position:absolute;
+    top:100%;
+    left:50%;
+    margin-left:-5px;
+    border-width:5px;
+    border-style:solid;
+    border-color:#555 transparent transparent transparent;
+}
+
+#todo-list button:hover, .tooltip {
+    visibility: visible;
+    opacity:1;
+}
+
+.todo {
+    margin-top:50px;
+}
+
+#quotes {
+    position:fixed;
+    bottom:0;
+    text-align:center;
+    padding:20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#author, #quote {
+    width:800px;
+    display:block;
+    text-align:center;
+    font-family:'Varela Round', sans-serif;
+}
+
