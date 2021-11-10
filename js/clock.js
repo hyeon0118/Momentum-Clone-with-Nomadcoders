@@ -9,7 +9,6 @@ function getClock() {
 }
 
 getClock();
-//위에 이거 안 적어주면 00:00 나오고 시계 나올때까지 1초기다려야 함 
 setInterval(getClock, 1000);
 
 
