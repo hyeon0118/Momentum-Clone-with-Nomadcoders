@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;1,100&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+#background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -5;
+  opacity: 0.5;
+  height: 100vh;
+  width: 100vw;
+  image-resolution: 300dpi;
+}
+
+.hidden {
+  display: none;
+}
+
+/*
+main {
+  position: relative;
+  transform: translateY(50%);
+  justify-content: center;
+}
+*/
+
+#clock,
+#date {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+#clock {
+  font-size: 40px;
+}
+
+#clock-container {
+  margin-bottom: 30px;
+}
+
+#weather {
+  height: 30px;
+}
+#weather-icon {
+  width: 25px;
+}
+
+#login-greeting-container {
+  justify-content: center;
+}
+
+#login {
+  border: none;
+  border-radius: 45px 0 0 45px;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  color: rgba(90, 90, 90, 0.8);
+  height: 50px;
+  width: 300px;
+  padding: 0;
+}
+
+#login:focus,
+#todo-input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 0.6s;
+}
+
+#login-button {
+  border: none;
+  border-radius: 0 45px 45px 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgba(90, 90, 90, 0.8);
+  height: 50px;
+  width: 100px;
+  padding: 0;
+  cursor: pointer;
+}
+
+#login-button:hover,
+#todo-button:hover {
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 1);
+  transition: ease 0.4s;
+}
+
+#login-button:active,
+#todo-button:active {
+  font-weight: bold;
+  background-color: rgb(206, 206, 206);
+  color: rgb(90, 90, 90);
+  transition: ease 0.4s;
+}
+
+#greeting,
+#greeting-user {
+  display: inline;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#greeting-user {
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+}
+
+.active_greeting {
+  animation-name: displaceContent1;
+  animation-duration: 1s;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.active_localInfo {
+  animation-name: displaceContent2;
+  animation-duration: 1s;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes displaceContent1 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(-5em);
+  }
+}
+
+@keyframes displaceContent2 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(-5em);
+  }
+}
+
+#logout {
+  margin-left: 10px;
+  border: 1px solid rgba(90, 90, 90, 0.5);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+#todo-input {
+  position: relative;
+  text-align: center;
+  border-radius: 25px;
+  width: 80vw;
+  max-width: 500px;
+  height: 45px;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#todo-list-container {
+  height: 30vh;
+  overflow: auto;
+}
+
+#todo {
+  position: relative;
+  height: 100px;
+  animation-name: displaceContent3;
+  animation-duration: 1s;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes displaceContent3 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(-3em);
+  }
+}
+
+#todo-button {
+  position: relative;
+  cursor: pointer;
+  border-radius: 25px;
+  height: 45px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgba(90, 90, 90, 0.8);
+}
+
+#todo-list {
+  overflow: auto;
+}
+
+#todo-list li {
+  position: relative;
+  list-style: none;
+  margin: 10px;
+}
+
+#delete-button {
+  margin-left: 20px;
+  border: none;
+  font-weight: bold;
+  color: salmon;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+#delete-button:focus {
+  background-color: rgba(155, 155, 155, 0.5);
+  color: rgb(158, 80, 71);
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  display: block;
+  background-color: lightslategrey;
+  opacity: 0.5;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  overflow: hidden;
+  font-size: 10px;
+  color: white;
+}
+
+blockquote {
+  font-size: 11px;
+  margin-bottom: 3px;
+}
+
+blockquote:hover {
+  text-shadow: 0px 4px 3px rgba(255, 255, 255, 0.6);
+  transform: translateY(-0.2em);
+  transition: ease 0.3s;
+}
+
+@media (max-width: 450px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0 0 60px;
+  }
+
+  #login {
+    width: 60vw;
+    height: 30px;
+  }
+
+  #login-button {
+    width: 20vw;
+    height: 30px;
+  }
+
+  #logout {
+    display: block;
+    position: relative;
+    transform: translateX(100px);
+    margin-top: 10px;
+  }
+
+  #todo-input {
+    width: 70vw;
+  }
+
+  #todo-input::placeholder {
+    font-size: 13px;
+  }
+
+  #todo-button {
+    width: 20vw;
+  }
+}

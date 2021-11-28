@@ -5,53 +5,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Challenge - Momentum</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-    <h2 id="clock">00:00</h2>
+    <main>
+        <section id="local-info" class="hidden">
+            <div id="weather">
+                <span id="city"></span>
+                <span id="temperature"></span>
+            </div>
+            <div id="clock-container">
+                <h2 id="date"></h2>
+                <h2 id="clock"></h2>
+            </div>
+        </section>
 
-    <div id="weather">
-        <span></span>
-        <span></span>
-    </div>
+        <section id="login-greeting-container">
+            <form id="login-form" class="hidden">
+                <input type="text" id="login" maxlength="15" placeholder="What's your name?" required>
+                <input type="submit" id="login-button" value="Login">
+            </form>
 
-    <div id="greeting-container" class="hidden">
-        <h2 id="greeting">Hello, </h2>
-        <h1 id="greetingUser"></h1>
-    </div>
-
-    <form class="hidden" id="login-form">
-        <input id=login required maxlength="15" type="text" placeholder="What is your name?">
-        <button>Log In</button>
-    </form>
-
-    <form id="todo-form">
-        <input type="text" placeholder="Write a Todo and Press Enter" required>
-    </form>
-
-    <div class="todo">
-        <h3>My Tasks</h3>
-        <span></span>
-        <ul id="todo-list"></ul>
-    </div>
-
-    <div id="quotes">
-        <span></span>
-        <span></span>
-    </div>
+            <div id="greeting-container" class="hidden">
+                <h2 id="greeting">Hello,</h2>
+                <h1 id="greeting-user"></h1>
+                <button id="logout">Logout</button>
+            </div>
+        </section>
+    </main>
 
 
-    <script src="js/greetings.js"></script>
+    <section id="todo" class="hidden">
+        <form id="todo-form">
+            <input type="text" placeholder="Write a Todo and Press Enter." id="todo-input" required>
+            <input type="submit" id="todo-button" value="Enter">
+        </form>
+        <div id="todo-list-container">
+            <span></span>
+            <ul id="todo-list"></ul>
+        </div>
+    </section>
+
+
+    <footer id="quote" class="hidden">
+        <blockquote></blockquote>
+        <cite></cite>
+    </footer>
+
+
+    <script src="js/login.js"></script>
     <script src="js/clock.js"></script>
-    <script src="js/quotes.js"></script>
-    <script src="js/background.js"></script>
+    <script src="js/quote.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/background.js"></script>
+
 
 </body>
 
